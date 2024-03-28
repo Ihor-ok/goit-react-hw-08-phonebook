@@ -24,7 +24,8 @@ function Phonebook() {
 
   const handleSubmit = (values, { resetForm }) => {
       
-      const contact = { ...values }
+    const contact = { ...values }
+    console.log(contact);
 
         
 
@@ -35,7 +36,7 @@ function Phonebook() {
     
     const newContact = {
       name: contact.name,
-      phone: contact.phone,
+      number: contact.number,
 };
 
 
@@ -71,7 +72,7 @@ function Phonebook() {
       <div className={css.phonebook}>
         <h1>Phonebook</h1>
         <PhonebookEditor handleSubmit={handleSubmit}/>
-        <h2>Contacts</h2>
+        
         <Filter  value={filter} onChange={changeFilter}/>
         { <Contacts  contacts={visibileContakt} hendleDelete={hendleDelete}/>}
         

@@ -7,12 +7,12 @@ import css from './PhonebookEditor.module.css'
 
 const schema = yup.object().shape({
     name: yup.string().required(),
-    phone: yup.number().typeError('enter a number').required(),
+    number: yup.number().typeError('enter a number').required(),
 })
         
 const initialValues = {
     name: '',
-    phone: '',
+    number: '',
 }
 
 
@@ -31,8 +31,8 @@ function PhonebookEditor({handleSubmit}) {
                         </label>
                         <label htmlFor="phone">
                             Number
-                            <Field className={css.input_tel} type="tel" placeholder="Enter phone number" name="phone" required />
-                            <ErrorMessage className={css.input_error} name="phone" component="div"/>
+                            <Field className={css.input_tel} type="tel" placeholder="Enter phone number" name="number" required />
+                            <ErrorMessage className={css.input_error} name="number" component="div"/>
                         </label>
                         <button type='submit'>Add contact</button>
                     </Form>

@@ -29,7 +29,7 @@ const Phonebook = React.memo(() => {
   const handleSubmit = (values, { resetForm }) => {
       
     const contact = { ...values }
-    console.log(contact);
+    
 
         
 

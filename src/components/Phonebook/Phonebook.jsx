@@ -18,13 +18,9 @@ const Phonebook = React.memo(() => {
   // const { items, isLoading, error } = contacts;
 
   useEffect(() => {
-    console.log('Component mounted');
+   
     dispatch(fetchContacts());
-     return () => {
-      // Логіка очищення, яка виконується при розмонтуванні компонента
-       console.log('Component unmounted');
-       
-    };
+     
   }, [dispatch]);
 
   

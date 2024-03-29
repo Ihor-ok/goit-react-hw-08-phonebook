@@ -30,7 +30,7 @@ export const contactsSlice = createSlice({
         state.isLoading = false;
         state.error = null;
         // state.contacts.items.push(...action.payload);
-        console.log(...action.payload);
+       
         state.contacts.items.splice(0, state.contacts.items.length, ...action.payload);
         
       })

@@ -4,22 +4,30 @@ import Contacts from 'components/Contacts/Contacts'
 import Filter from '../Filter/Filter'
 import css from './Phonebook.module.css'
 import{filterChange} from 'components/redux/filterSlice'
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { addContact, deleteContact, fetchContacts } from 'fetch/fetchContacts'
 
 
-function Phonebook() {
+const Phonebook = React.memo(() => {
 
   const contactsState = useSelector((state) => state.contacts);
   const filter = useSelector((state) => state.filter)
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchContacts());
-  }, [dispatch]);
-
   const { contacts } = contactsState;   // destructuring state
   // const { items, isLoading, error } = contacts;
+
+  useEffect(() => {
+    console.log('Component mounted');
+    dispatch(fetchContacts());
+     return () => {
+      // Логіка очищення, яка виконується при розмонтуванні компонента
+       console.log('Component unmounted');
+       
+    };
+  }, [dispatch]);
+
+  
 
 
   const handleSubmit = (values, { resetForm }) => {
@@ -83,7 +91,7 @@ function Phonebook() {
 
 
   
-}
+}) 
 
 
 

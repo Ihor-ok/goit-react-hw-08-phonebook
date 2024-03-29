@@ -20,7 +20,8 @@ export const RegisterForm = () => {
   };
 
   return (
-    <form className={css.form} onSubmit={handleSubmit} autoComplete="off">
+    <div className={css.form_style}>
+          <form className={css.form} onSubmit={handleSubmit} autoComplete="off">
       <label className={css.label}>
         Username
         <input type="text" name="name" />
@@ -35,5 +36,8 @@ export const RegisterForm = () => {
       </label>
       <button type="submit">Register</button>
     </form>
+      
+    </div>
+
   );
 };

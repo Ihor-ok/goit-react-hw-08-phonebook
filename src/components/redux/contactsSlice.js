@@ -13,6 +13,11 @@ export const contactsSlice = createSlice({
   }},  // initializes state 
 
   reducers: {
+    resetState(state) {
+      state.contacts.items = [];
+      state.contacts.isLoading = false;
+      state.contacts.error = null;
+    }
    
   },
 
@@ -24,7 +29,9 @@ export const contactsSlice = createSlice({
       .addCase(fetchContacts.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
-        state.contacts.items.push(...action.payload);
+        // state.contacts.items.push(...action.payload);
+        console.log(...action.payload);
+        state.contacts.items.splice(0, state.contacts.items.length, ...action.payload);
         
       })
       .addCase(fetchContacts.rejected, (state, action) => {

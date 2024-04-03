@@ -4,7 +4,7 @@ export default function Contacts({ contacts, hendleDelete }) {
 
   return (
     <>
-      <h2>Contacts</h2>
+      <h2 className={css.title}>Contacts</h2>
       <ul className={css.list}>
         {contacts.map((contact) => {
           return <li className={css.list_line} key={contact.id}>

@@ -4,7 +4,7 @@
     
 }
 
-label {
+.label {
     margin-bottom: 10px;
     
 }
@@ -26,11 +26,12 @@ label {
     margin-left: 10px;
 }
 
-button {
+.button {
     padding: 10px;
     background-color: #4caf50;
     color: #fff;
     cursor: pointer;
     border: none;
     border-radius: 5px;
+    /* width: 250px; */
 }

@@ -2,8 +2,19 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    color: #fcfcfc;
 }
 
 .username {
     font-weight: 700;
+}
+
+.button {
+    padding: 10px;
+    background-color: #FF4500;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
 }

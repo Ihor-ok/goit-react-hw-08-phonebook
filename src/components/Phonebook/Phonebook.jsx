@@ -74,7 +74,7 @@ const Phonebook = React.memo(() => {
   return (
         
       <div className={css.phonebook}>
-        <h1>Phonebook</h1>
+        <h1 className={css.title}>Phonebook</h1>
         <PhonebookEditor handleSubmit={handleSubmit}/>
         
         <Filter  value={filter} onChange={changeFilter}/>

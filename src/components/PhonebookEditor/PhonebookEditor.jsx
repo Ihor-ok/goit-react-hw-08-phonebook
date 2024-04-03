@@ -24,17 +24,17 @@ function PhonebookEditor({handleSubmit}) {
             <>
                 <Formik initialValues={initialValues} onSubmit={handleSubmit} validationSchema={schema}>
                     <Form className={css.form} autoComplete='off'>
-                        <label htmlFor="Name">
+                        <label className={css.label} htmlFor="Name">
                             Name
                             <Field className={css.input_name} type="text" placeholder="Enter name" name="name" required />
                             <ErrorMessage className={css.input_error} name="name" component="div"/>
                         </label>
-                        <label htmlFor="phone">
+                        <label className={css.label} htmlFor="phone">
                             Number
                             <Field className={css.input_tel} type="tel" placeholder="Enter phone number" name="number" required />
                             <ErrorMessage className={css.input_error} name="number" component="div"/>
                         </label>
-                        <button type='submit'>Add contact</button>
+                        <button className={css.button} type='submit'>Add contact</button>
                     </Form>
 
                 </Formik>

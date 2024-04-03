@@ -1,21 +1,17 @@
 .phonebook {
     max-width: 600px;
-    margin: 20px auto;
+    margin: 80px auto;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
+    color: #000000;
+
 }
 
-h1 {
+.title {
     font-size: 24px;
     margin-bottom: 15px;
-    color: #333;
+    color: #000000;
     text-align: center;
 }
 
-h2 {
-    font-size: 20px;
-    margin: 20px 0 10px;
-    color: #333;
-    text-align: center;
-}

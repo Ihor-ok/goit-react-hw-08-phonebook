@@ -8,7 +8,7 @@ export default function Contacts({ contacts, hendleDelete }) {
       <ul className={css.list}>
         {contacts.map((contact) => {
           return <li className={css.list_line} key={contact.id}>
-                    {contact.name} {contact.number}
+                    <b>{contact.name}:</b> {contact.number}
                     <button className={css.list_button}  type="button" onClick={() => hendleDelete(contact.id)}>delete</button>
                   </li>
         })}       

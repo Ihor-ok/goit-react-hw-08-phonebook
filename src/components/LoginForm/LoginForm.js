@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { logIn } from 'components/redux/auth/operations';
-import css from './LoginForm.module.css';
+
 import { Sheet } from '@mui/joy';
 
 
@@ -10,8 +10,9 @@ import FormControl from '@mui/joy/FormControl';
 import FormLabel from '@mui/joy/FormLabel';
 import Input from '@mui/joy/Input';
 import Button from '@mui/joy/Button';
-import Link from '@mui/joy/Link';
+
 import { NavLink } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 
 
@@ -31,7 +32,16 @@ export const LoginForm = () => {
   };
 
   return (
-     <main>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 0.8,
+        delay: 0.5,
+        ease: [0, 0.71, 0.2, 1.01]
+      }}
+    >
+      <main>
       
       <CssBaseline/>
       <Sheet
@@ -89,21 +99,8 @@ export const LoginForm = () => {
       </Sheet>
     </main>
 
+    </motion.div>
 
-    // <div className={css.form_style}>
-    //   <form className={css.form} onSubmit={handleSubmit} autoComplete="off">
-    //   <label className={css.label}>
-    //     Email
-    //     <input type="email" name="email" />
-    //   </label>
-    //   <label className={css.label}>
-    //     Password
-    //     <input type="password" name="password" />
-    //   </label>
-    //   <button type="submit">Log In</button>
-    //   </form>
-
-    // </div>
     
   );
 };

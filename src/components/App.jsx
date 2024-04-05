@@ -34,7 +34,7 @@ export const App = () => {
   useEffect(() => {
     // Отримуємо шлях з адресного рядка та на його основі встановлюємо бекграунд
        const pathname = location.pathname;
-       console.log(pathname);
+
     if (pathname === '/') {
       setBackground(backgroundImage1);
     } 

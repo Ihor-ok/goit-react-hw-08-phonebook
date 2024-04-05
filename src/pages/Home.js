@@ -19,7 +19,7 @@ const styles = {
     fontWeight: 500,
     fontSize: 60,
     textAlign: 'center',
-    color: '#A9A9A9',
+    color: '#F5F843',
   },
 };
 
